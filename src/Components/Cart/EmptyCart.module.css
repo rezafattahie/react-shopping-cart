@@ -1,0 +1,36 @@
+.empty-cart__content {
+    color: #013237;
+    margin: 4rem auto 11rem;
+    width: 20rem;
+    max-width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.empty-cart__content img {
+
+    width: 5rem;
+    height: 5rem;
+
+}
+
+.empty-cart__action_close {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #4CA771;
+    background-color: #EAF9E7;
+    color: #013237;
+}
+
+.empty-cart__action_close:hover {
+    background-color: #09717c;
+    cursor: pointer;
+}
+
+.empty-cart__action {
+    position: absolute;
+    right: 3rem;
+}

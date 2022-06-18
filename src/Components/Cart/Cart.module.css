@@ -1,0 +1,196 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.75);
+
+}
+
+
+
+.card {
+    position: relative;
+    overflow: auto;
+    top: 7vh;
+    left: 5%;
+    width: 90%;
+    height: 85vh;
+    background-color: #EAF9E7;
+    padding: 1rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+    animation: card-show 0.3s ease-in-out;
+}
+
+.orders {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.order-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+
+.btn-del {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: -0.4rem;
+    margin-right: 0.7rem;
+    position: relative;
+}
+
+.btn-del:hover {
+    cursor: pointer;
+}
+
+.order {
+    width: 40rem;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #013237;
+    color: #EAF9E7;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #4CA771;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.829);
+}
+
+.order__actions {
+    border: #4CA771 1px solid;
+    border-radius: 0.5rem;
+    width: 10rem;
+    max-width: 10rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.order__details {
+    height: 4rem;
+    width: 30%;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.btn-inc,
+.btn-dec {
+    border: none;
+    background: transparent;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.btn-inc {
+    color: forestgreen;
+}
+
+.btn-dec {
+    color: rgb(230, 36, 62);
+}
+
+.total-price {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    max-width: 100%;
+    margin: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e20e78;
+}
+
+.total-price__text {
+    background-color: #C0E6BA;
+    color: #013237;
+    padding: 1rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.829);
+
+}
+
+.total-price__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.total-price__actions_order {
+    padding: 1rem 2rem;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid #4CA771;
+    background-color: #013237;
+    color: #EAF9E7;
+}
+
+.total-price__actions_order:hover,
+.total-price__actions_close:hover {
+    background-color: #09717c;
+    cursor: pointer;
+}
+
+.total-price__actions_close {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #4CA771;
+    background-color: #EAF9E7;
+    color: #013237;
+}
+
+@keyframes card-show {
+    from {
+        top: 70vh;
+        opacity: 0;
+    }
+
+    to {
+        top: 7vh;
+        opacity: 1;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .total-price__actions {
+        margin-top: 1rem;
+    }
+
+    .total-price {
+        justify-content: flex-end;
+    }
+
+    .total-price__text {
+        margin-right: 0;
+    }
+
+    .total-price__actions_order,
+    .total-price__actions_close {
+        padding: 1rem;
+    }
+}

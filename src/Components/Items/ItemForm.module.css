@@ -1,0 +1,27 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Inputbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-inc,
+.btn-dec {
+    border: none;
+    background: transparent;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.btn-inc {
+    color: forestgreen;
+}
+
+.btn-dec {
+    color: rgb(230, 36, 62);
+}

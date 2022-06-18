@@ -1,0 +1,45 @@
+
+.cart-icon {
+    color: #EAF9E7;
+    /* margin-top: 10px;
+    margin-left: 30px; */
+    z-index: 1;
+    font-size: 1px;
+    width: 3.5rem;
+    height: 3.5rem;
+    right: 0px;
+}
+
+.lbl {
+    box-shadow: 0 0 10px rgba(233, 227, 227, 0.692);
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2;
+    font-size: 15px;
+    font-weight: 700;
+    top: -40px;
+    left: -10px;
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 40%;
+    padding: 0.2rem;
+
+}
+
+.cart-icon:hover {
+    cursor: pointer;
+    color: #4CA771;
+}
+
+.bump {
+    animation: badge-bumper 100ms;
+}
+
+@keyframes badge-bumper {
+    from {
+        font-size: 0.2rem;
+    }
+
+    to {
+        padding: 1rem;
+    }
+}
