@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Input from '../UI/Input'
+import Input from '../UI/Input';
 import Augmenter from '../Augmenter/Augmenter';
 import classes from './ItemForm.module.css';
 const ItemForm = (props) => {
