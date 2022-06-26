@@ -39,7 +39,8 @@
 
 .empty-cart__action {
     position: absolute;
-    right: 3rem;
+    right: 2rem;
+    bottom: -16rem;
 }
 
 @keyframes card-show {
