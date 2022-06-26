@@ -5,7 +5,9 @@ import classes from './OrderForm.module.css';
 const OrderForm = (props) => {
   const inputRefName = useRef();
   const inputRefTel = useRef();
+  const inputRefEmail = useRef();
   const inputRefAddress = useRef();
+  const inputRefZip = useRef();
   // const name = inputRefName.current.value;
   return (
     <section className={classes['order-form']}>
@@ -19,7 +21,7 @@ const OrderForm = (props) => {
           <span className={classes.tel}>Tel</span>
         </div>
         <div>
-          <input ref={inputRefTel} type="email" required="required" />
+          <input ref={inputRefEmail} type="email" required="required" />
           <span className={classes.tel}>E-MAIL</span>
         </div>
         <div>
@@ -27,7 +29,7 @@ const OrderForm = (props) => {
           <span className={classes.adress}>Address</span>
         </div>
         <div>
-          <input ref={inputRefAddress} type="text" required="required" />
+          <input ref={inputRefZip} type="text" required="required" />
           <span className={classes.adress}>ZIP CODE</span>
         </div>
       </div>
