@@ -9,8 +9,6 @@
 
 }
 
-
-
 .card {
     position: relative;
     overflow: auto;
@@ -56,7 +54,7 @@
 }
 
 .order {
-    width: 40rem;
+    width: 17rem;
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +72,7 @@
 .order__actions {
     border: #4CA771 1px solid;
     border-radius: 0.5rem;
-    width: 10rem;
+    width: 6rem;
     max-width: 10rem;
     padding: 0.5rem;
     display: flex;
@@ -86,7 +84,7 @@
 
 .order__details {
     height: 4rem;
-    width: 30%;
+    width: 6rem;
     max-width: 40%;
     display: flex;
     flex-direction: column;
@@ -110,12 +108,19 @@
     color: rgb(230, 36, 62);
 }
 
+.orders-form {
+    position: relative;
+    top: 0vh;
+    animation: card-show2 0.3s ease-in-out;
+}
+
 .total-price {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
     max-width: 100%;
     margin: 2rem;
     padding-top: 2rem;
@@ -129,15 +134,14 @@
     margin-right: 2rem;
     border-radius: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.829);
+
 }
 
 .total-price__actions {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: absolute;
-    right: 2rem;
-    top: 26rem;
+
 }
 
 .total-price__actions_order {
@@ -171,6 +175,18 @@
 
     to {
         top: 7vh;
+        opacity: 1;
+    }
+
+}
+@keyframes card-show2 {
+    from {
+        top: 70vh;
+        opacity: 0;
+    }
+
+    to {
+        top: 0vh;
         opacity: 1;
     }
 
