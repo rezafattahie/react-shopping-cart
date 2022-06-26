@@ -16,7 +16,8 @@
     overflow: auto;
     top: 7vh;
     left: 5%;
-    width: 90%;
+    width: 60%;
+    margin: 0 auto;
     height: 85vh;
     background-color: #EAF9E7;
     padding: 1rem;
