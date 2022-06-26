@@ -3,9 +3,11 @@ import ItemContext from '../../store/item-context';
 import EmptyCart from './EmptyCart';
 
 import classes from './Cart.module.css';
+import OrderForm from './Order/OrderForm';
 const Cart = (props) => {
   const itemCtx = useContext(ItemContext);
   const [cartIsEmpty, setCartIsEmpty] = useState(false);
+  const [ordering, setOrdering] = useState(false);
   useEffect(() => {
     if (itemCtx.totalAmount === 0) {
       setCartIsEmpty(true);
@@ -23,6 +25,14 @@ const Cart = (props) => {
 
   const removeItemFromListHandler = (id) => {
     itemCtx.removeItem(id);
+  };
+
+  const showOrderForm = () => {
+    setOrdering(true);
+  };
+
+  const backToCartHandler = () => {
+    setOrdering(false);
   };
 
   const cartItems = itemCtx.items.map((item) => {
@@ -73,12 +83,14 @@ const Cart = (props) => {
     <Fragment>
       <div className={classes.backdrop}>
         <div className={classes.card}>
-          {cartIsEmpty ? (
+          {ordering ? (
+            <OrderForm onBackToCart={backToCartHandler} />
+          ) : cartIsEmpty ? (
             <section>
-              <EmptyCart onClick={props.onClick}/>
+              <EmptyCart onClick={props.onClick} />
             </section>
           ) : (
-            <section>
+            <section className={classes['orders-form']}>
               <div style={{width:'100%'}}>
                 <ul className={classes.orders}>{cartItems}</ul>
               </div>
@@ -94,7 +106,10 @@ const Cart = (props) => {
                   >
                     Close
                   </button>
-                  <button className={classes['total-price__actions_order']}>
+                  <button
+                    onClick={showOrderForm}
+                    className={classes['total-price__actions_order']}
+                  >
                     Order
                   </button>
                 </div>
@@ -103,7 +118,6 @@ const Cart = (props) => {
           )}
         </div>
       </div>
-      )
     </Fragment>
   );
 };
