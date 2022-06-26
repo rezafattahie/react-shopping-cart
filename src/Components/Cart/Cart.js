@@ -79,7 +79,7 @@ const Cart = (props) => {
             </section>
           ) : (
             <section>
-              <div>
+              <div style={{width:'100%'}}>
                 <ul className={classes.orders}>{cartItems}</ul>
               </div>
 
